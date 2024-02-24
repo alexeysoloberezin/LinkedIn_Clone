@@ -31,7 +31,7 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt = 'Avatar', size = '48', statu
 
   return (
     <div style={sizeClass} className={`inline-block relative overflow-hidden rounded-full  ${classes || ''}`}>
-      <img src={src} alt={alt} className={`object-cover w-full h-full`} />
+      <img src={src} alt={alt || ''} className={`object-cover w-full h-full`} />
       {status && <img src={statusImgs[status]} alt={status} className={`absolute bottom-0 right-0`} />}
     </div>
   );

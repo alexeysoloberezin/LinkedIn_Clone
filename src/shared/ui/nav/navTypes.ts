@@ -5,7 +5,7 @@ export type NavItemProps = {
 }
 
 export type NavListProps = {
-  items: NavItemProps[];
+  items?: NavItemProps[];
   notifications?: number;
 }
 

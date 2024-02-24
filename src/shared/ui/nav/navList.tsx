@@ -8,7 +8,7 @@ function NavList({items, notifications}: NavListProps) {
   const nav: NavItemProps[] = items || navDefault;
 
   return (
-    <div className={'flex gap-3'}>
+    <div className={'flex '}>
       {nav.map((item, index) => (
           <NavItem
             key={index}
