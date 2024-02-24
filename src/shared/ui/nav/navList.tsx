@@ -12,7 +12,7 @@ function NavList({items, notifications}: NavListProps) {
       {nav.map((item, index) => (
           <NavItem
             key={index}
-            icon={item.icon}
+            icon={item.icon || 'home'}
             notifications={item.icon === 'notify' ? notifications : null}
             label={item.label}
           />

@@ -1,5 +1,8 @@
+import React from "react";
+
 export type NavItemProps = {
-  icon: NavIcon;
+  icon?: NavIcon;
+  children: React.ReactNode;
   label: string;
   notifications?: number | undefined | null;
 }
@@ -9,4 +12,10 @@ export type NavListProps = {
   notifications?: number;
 }
 
-export type NavIcon = 'home' | 'jobs' | 'messages' | 'network' | 'notify';
+const NavIconArr =['home', 'jobs', 'messages', 'network', 'notify'] as const;
+
+export type NavIcon = typeof NavIconArr[number];
+
+export function isNavIcon(icon: any): icon is NavIcon {
+  return NavIconArr.includes(icon);
+}

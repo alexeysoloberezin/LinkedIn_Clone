@@ -3,6 +3,8 @@ import Logo from "@/shared/ui/icons/Logo";
 import Search from "@/shared/ui/search/search";
 import NavList from "@/shared/ui/nav/navList";
 import NavProfile from "@/entities/NavProfile/navProfile";
+import NavItem from "@/shared/ui/nav/navItem";
+import JobIcon from "@/shared/ui/icons/JobIcon";
 
 function Header(props) {
   return (
@@ -14,6 +16,14 @@ function Header(props) {
           <NavList />
         </div>
         <NavProfile />
+
+        <div className={'border-l pl-2'}>
+          <NavItem
+            label={'Post a job for free'}
+          >
+            <JobIcon />
+          </NavItem>
+        </div>
       </div>
     </div>
 
